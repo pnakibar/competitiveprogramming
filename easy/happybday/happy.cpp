@@ -7,8 +7,6 @@ using namespace std;
 int main(){
 	string song[]= {"Happy", "birthday", "to", "you", "Happy", "birthday", "to", "you", "Happy", "birthday", "to", "Rujia", "Happy", "birthday", "to", "you"};
 	int songLength = (sizeof(song)/sizeof(*song));
-	cout << songLength << endl;
-
 
 	int qtyOfPeople;
 	cin >> qtyOfPeople;
@@ -27,7 +25,7 @@ int main(){
 				p=0;
 			}
 
-			cout << people[p] << ":" << song[s] << endl;
+			cout << people[p] << ": " << song[s] << endl;
 
 			p++;
 		}
