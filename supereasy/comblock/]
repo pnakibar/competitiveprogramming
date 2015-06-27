@@ -1,0 +1,22 @@
+#include<iostream>
+#include<algorithm>
+using namespace std;
+
+int main(){
+	while(true){
+		int init, n0, n1, n2;
+
+		cin >> init;
+		cin >> n0;
+	      	cin >> n1;
+		cin >> n2;	
+
+		int degrees = 720;
+		degrees += ((init - n0) > 0 ? init - n1 : 40 - ( init - n0)) * 9; //first clockwise
+		degrees += 360;
+		degrees += ((n0 - n1) > 0 ? n0 - n1 : 40 - (n0 - n1)) * 9; //counter clock wise
+		degrees += 
+	}
+
+	return 0;
+}

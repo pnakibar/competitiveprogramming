@@ -1,25 +1,26 @@
 #include<iostream>
-#include<cmath>
+#include<algorithm>
 using namespace std;
-int turn(int actual, int next){
-	int degrees = 360/40;
-	return abs(next-actual)*degrees;
-}
+
 int main(){
-	int a,b,c,d;
-	do{
-		int result = 720;
+	while(true){
+		int init, n0, n1, n2;
 
-		cin>>a;
-		cin>>b;
-		cin>>c;
-		cin>>d;
+		cin >> init;
+		cin >> n0;
+	      	cin >> n1;
+		cin >> n2;	
 
-		result = result + turn(a, b);
-		result = result + turn(b, c);
-		result = result + turn(c, d);
+		if ((init == 0) && (n0 == 0) && (n1 == 0) && (n2 == 0)) return 0;
 
-		cout<<result<<endl;
-	}while ((a!=0) && (b!=0) && (c!=0) && (d!=0));
+		int degrees = 720;
+		degrees += ((init - n0) > 0 ? init - n0 : 40 - (n0 - init)) * 9; //first clockwise
+		degrees += 360;
+		degrees += ((n1 - n0) > 0 ? n1 - n0 : 40 - (n0 - n1)) * 9; //counter clock wise
+		degrees += ((n1 - n2) > 0 ? n1 - n2 : 40 - (n2 - n1)) * 9; //second clockwise
+
+		cout << degrees << endl;
+	}
+
+	return 0;
 }
-
