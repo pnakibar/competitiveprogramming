@@ -1,0 +1,27 @@
+#include<iostream>
+#include<string>
+using namespace std;
+
+int main(){
+	string words[] = {"HELLO", "HOLA", "HALLO", "BONJOUR", "CIAO", "ZDRAVSTVUJTE"};
+	string langs[] = {"ENGLISH", "SPANISH", "GERMAN", "FRENCH", "ITALIAN", "RUSSIAN", "UNKNOWN"};
+	int qty = 6;
+
+	for (int i = 0; i < 2000; i++){
+		string word;
+		cin >> word;
+
+		for (int j=0; j<8; j++){
+			cout<<"Case "<<i+1<<": ";
+
+			if (j == 7) cout<<langs[i];
+
+			else if (words[i] == word){
+				cout<<langs[i]<<endl;
+				break;
+			}
+		}
+	}
+
+	return 0;
+}
