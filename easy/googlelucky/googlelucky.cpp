@@ -1,32 +1,29 @@
 #include<iostream>
-#include<string>
-#include<regex>
+using namespace std;
 
 int main(){
-	int qtyUrls = 10;
-	string words[qtyUrls];
-	int value[qtyUrls];
-
-
 	int t;
 	cin >> t;
 
-	int max = 0;
-	
-	for (int i = 0; i < qtyUrls; i++){
-		string url;
-		int rate;
+	for (int i=0; i<t; i++){
+		int max = 0;
 
-		cin >> url;
-		cin >> rate;
+		string urls[10];
+		int importances[10];
 
-		if (rate > max) max = rate;
+		for (int c=0; c<10; c++){
+			cin >> urls[c];
+			cin >> importances[c];
+
+			if (importances[c] > max) max = importances[c];
+		}
+
+		cout<<"Case #"<<i+1<<":"<<endl;
+
+		for (int c=0; c<10; c++)
+			if (importances[c] == max)
+				cout<<urls[c]<<endl;
 	}
 
-	int min = max+1-t;	
-	for (int i=0; i < t; i++){
-		min = min + i;
-		cout<<"Case #"<<i+1<<":"<<endl;
-		for (int e=0; e<qtyUrls; e++){
-			if  
-
+	return 0;
+}
