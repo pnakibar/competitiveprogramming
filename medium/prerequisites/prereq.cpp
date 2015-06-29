@@ -1,7 +1,6 @@
 #include<iostream>
 
 using namespace std;
-
 bool inArray(int number, int arr[]){
 	int sizeArr = (sizeof(arr)/sizeof(*arr));
 	
